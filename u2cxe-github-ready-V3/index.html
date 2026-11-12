@@ -1,0 +1,202 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abdulrahman Ghanayem (u2cxe) | Red Team</title>
+<meta name="description" content="Abdulrahman Ghanayem, aka u2cxe. Networks and Cybersecurity student building toward red team operations. CCNA certified.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=Unbounded:wght@400;700&display=swap">
+<script>document.documentElement.className='js'</script>
+<style>
+:root{--bg:#0b0809;--ink:#f1e9e2;--dim:#a08f8a;--red:#ff3d3d;--amb:#ffb454;--line:#2a1c1e;--pan:#140d0f;--d:'Unbounded',system-ui,sans-serif;--m:'IBM Plex Mono',ui-monospace,monospace;--s:'IBM Plex Sans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.7 var(--s);overflow-x:hidden}
+a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--amb);outline-offset:3px}
+.fine,.fine *{cursor:none}.ring{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1.5px solid var(--red);border-radius:50%;pointer-events:none;z-index:200;transition:width .2s,height .2s,margin .2s,background .2s}
+.ring.big{width:56px;height:56px;margin:-28px 0 0 -28px;background:#ff3d3d22}.ring::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:4px;margin:-2px;background:var(--red);border-radius:50%}
+#boot{position:fixed;inset:0;background:#050304;z-index:300;display:flex;flex-direction:column;justify-content:center;padding:0 max(1.5rem,12vw);font:.9rem/2 var(--m);color:var(--dim);transition:opacity .6s}
+#boot b{color:var(--red)}#boot small{margin-top:1.5rem;opacity:.5}#boot.x{opacity:0;pointer-events:none}
+.prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--red),var(--amb));z-index:90}
+header{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;padding:.9rem clamp(1rem,4vw,3rem);background:linear-gradient(var(--bg),transparent)}
+.brand{font:700 .95rem var(--d)}.brand i{color:var(--red);font-style:normal}
+nav{display:flex;gap:1.5rem;align-items:center;font:.8rem var(--m)}nav a{color:var(--dim);transition:color .2s}nav a:hover{color:var(--ink)}
+#cb{font:.78rem var(--m);background:none;color:var(--ink);border:1px solid var(--line);padding:.4rem .8rem;border-radius:3px;cursor:pointer}#cb:hover{border-color:var(--red)}
+.rail{position:fixed;right:1.4rem;top:50%;transform:translateY(-50%);z-index:70;list-style:none;display:flex;flex-direction:column;gap:.9rem}
+.rail a{display:flex;align-items:center;gap:.6rem;justify-content:flex-end;font:.7rem var(--m);color:transparent;transition:color .3s}
+.rail a::after{content:"";width:9px;height:9px;border:1.5px solid var(--dim);border-radius:50%;transition:.3s}
+.rail a:hover,.rail a.on{color:var(--ink)}.rail a.on::after{background:var(--red);border-color:var(--red);box-shadow:0 0 12px var(--red)}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:100px clamp(1.2rem,6vw,5rem) 60px}
+#g{position:absolute;inset:0;width:100%;height:100%}
+.hc{position:relative;z-index:2;max-width:560px;pointer-events:none}.hc a,.hc .btns{pointer-events:auto}
+.tag{font:.8rem var(--m);color:var(--red)}
+h1{font:700 clamp(2.3rem,5.4vw,4.4rem)/1.08 var(--d);letter-spacing:-.03em;margin:1rem 0 1.4rem}
+h1 em{font-style:normal;color:var(--red);display:block}
+.lead{color:var(--dim);max-width:46ch;margin-bottom:1.8rem}.lead b{color:var(--ink);font-weight:500}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{font:500 .82rem var(--m);padding:.8rem 1.2rem;border:1px solid var(--red);background:var(--red);color:#fff;border-radius:3px;display:inline-block;transition:transform .2s,box-shadow .25s;cursor:pointer}
+.btn.g{background:transparent;border-color:var(--line);color:var(--ink)}.btn:hover{box-shadow:0 10px 30px #ff3d3d40}
+.hud{position:absolute;z-index:3;left:clamp(1.2rem,6vw,5rem);bottom:28px;font:.78rem var(--m);color:var(--dim)}
+.hud b{color:var(--red);font-size:1.3rem}.hud span{color:var(--amb);margin-left:.8rem}
+#win{position:absolute;z-index:5;right:clamp(1rem,5vw,4rem);bottom:90px;max-width:340px;background:var(--pan);border:1px solid var(--red);padding:1.2rem;border-radius:6px;font:.82rem/1.6 var(--m);transform:scale(.9);opacity:0;pointer-events:none;transition:.5s}
+#win.on{transform:none;opacity:1;pointer-events:auto}#win b{color:var(--red)}#win a{color:var(--amb);text-decoration:underline}
+.sec{padding:110px clamp(1.2rem,6vw,5rem);max-width:1180px;margin:auto}
+.ph{font:.8rem var(--m);color:var(--red);margin-bottom:.6rem}
+h2{font:700 clamp(1.6rem,3.6vw,2.6rem)/1.15 var(--d);letter-spacing:-.025em;margin-bottom:1rem;max-width:20ch}
+.sub{color:var(--dim);max-width:60ch;margin-bottom:2.4rem}
+.js .rv{opacity:0;transform:translateY(36px);transition:opacity .8s calc(var(--i,0)*.1s),transform .8s calc(var(--i,0)*.1s)}.js .rv.in{opacity:1;transform:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.1rem}
+.card{background:var(--pan);border:1px solid var(--line);border-radius:6px;padding:1.4rem;transition:border-color .25s,transform .15s;transform-style:preserve-3d}
+.card:hover{border-color:var(--red)}.card h3{font:700 .95rem var(--d);margin-bottom:.5rem}.card p{color:var(--dim);font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}.chips span{font:.72rem var(--m);padding:.2rem .55rem;border:1px solid var(--line);border-radius:3px;color:var(--amb)}
+.empty{border-style:dashed;display:flex;flex-direction:column;justify-content:center;min-height:140px}.empty b{font:500 .8rem var(--m);color:var(--dim)}
+.stats{display:flex;gap:3rem;flex-wrap:wrap;margin-top:2rem}.stats b{display:block;font:700 2.4rem var(--d);color:var(--red)}.stats small{font:.75rem var(--m);color:var(--dim)}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem}.about p{color:var(--dim);margin-bottom:1rem}.about p b{color:var(--ink);font-weight:500}
+.road{list-style:none;border-left:1px solid var(--line);margin-left:6px}.road li{position:relative;padding:0 0 1.8rem 1.8rem}
+.road li::before{content:"";position:absolute;left:-6px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--dim)}
+.road .d::before{background:var(--red);border-color:var(--red);box-shadow:0 0 12px var(--red)}.road .n::before{border-color:var(--amb);animation:pl 1.8s infinite}
+@keyframes pl{0%{box-shadow:0 0 0 0 #ffb45466}100%{box-shadow:0 0 0 14px #ffb45400}}
+.road h3{font:700 1rem var(--d)}.road small{font:.72rem var(--m);color:var(--dim);margin-left:.6rem}.road p{color:var(--dim);font-size:.88rem}
+.cert{display:grid;grid-template-columns:110px 1fr;gap:1.4rem;align-items:center;grid-column:1/-1;position:relative;overflow:hidden;border-color:#5a2a2a}
+.cert::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0),#ff3d3d26,#ffb45410 40%,transparent 70%);pointer-events:none}
+.cert img{width:110px;height:110px;object-fit:contain;border-radius:8px;background:#fff;padding:6px}
+.cert dl{display:grid;grid-template-columns:auto 1fr;gap:.15rem 1rem;font:.76rem var(--m);margin:.7rem 0 1rem}.cert dt{color:var(--dim)}
+.ver{font:.74rem var(--m);color:#6dff9a}
+.cert .btn{padding:.55rem 1rem;position:relative;z-index:2}
+.big{font:700 clamp(2rem,6vw,4.6rem)/1.05 var(--d);letter-spacing:-.03em;margin-bottom:1.5rem}
+footer{border-top:1px solid var(--line);padding:1.5rem clamp(1.2rem,6vw,5rem);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font:.76rem var(--m);color:var(--dim)}
+footer button{font:inherit;background:none;border:1px solid var(--line);color:var(--dim);padding:.25rem .7rem;border-radius:3px;cursor:pointer}
+dialog{background:var(--pan);color:var(--ink);border:1px solid var(--red);border-radius:8px;padding:1.4rem;width:min(760px,92vw);max-height:90vh;overflow:auto;margin:auto}dialog::backdrop{background:#000c;backdrop-filter:blur(4px)}
+dialog img.p{width:100%;border-radius:4px;margin:1rem 0}dialog h3{font:700 1rem var(--d)}
+#o{font:.82rem/1.7 var(--m);white-space:pre-wrap;min-height:220px;max-height:50vh;overflow:auto;color:var(--dim)}#o b{color:var(--red);font-weight:500}
+#ci{width:100%;background:none;border:0;border-top:1px solid var(--line);outline:0;color:var(--ink);font:.85rem var(--m);padding:.8rem 0 0;margin-top:.6rem}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(480px circle at var(--sx,50%) var(--sy,30%),#ff3d3d12,transparent 65%)}
+.ice{--red:#46d9ff;--amb:#b6ff8a;--line:#1c2a2e}#h1 em{pointer-events:auto}
+#log{position:absolute;z-index:3;left:clamp(1.2rem,6vw,5rem);bottom:66px;font:.72rem/1.7 var(--m);color:var(--dim);white-space:pre}#log div{animation:fi .4s}@keyframes fi{from{opacity:0;transform:translateX(-10px)}}
+#rs{font:inherit;margin-left:.8rem;background:none;border:1px solid var(--line);color:var(--dim);padding:.1rem .6rem;border-radius:3px;cursor:pointer}#rs:hover{border-color:var(--red)}
+.tl{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}.tl button{font:.8rem var(--m);background:none;color:var(--amb);border:1px solid var(--line);padding:.45rem .9rem;border-radius:3px;cursor:pointer;transition:.2s}.tl button.on,.tl button:hover{border-color:var(--red);color:var(--ink)}
+.th{font:700 1rem var(--d);margin:3rem 0 1rem}#tp{min-height:120px}#tp h3{animation:fi .4s}
+.calm *,.calm *::before,.calm *::after{animation:none!important;transition:none!important}.calm .rv{opacity:1!important;transform:none!important}
+@media(max-width:820px){nav a,.rail,#log{display:none}.about{grid-template-columns:1fr}.cert{grid-template-columns:1fr}.hc{max-width:none}.hero{align-items:flex-start}}
+</style><link rel="stylesheet" href="upgrade.css"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0b0809"><link rel="stylesheet" href="interactive.css"></head><body>
+<div id="boot"><div id="bl"></div><small>press any key to skip</small></div>
+<div class="prog" id="pg"></div><div class="ring" id="rg" aria-hidden="true"></div>
+<header><a class="brand" href="#top">u2cxe<i>@</i>redteam</a><nav><a href="#recon">about</a><a href="#weapon">skills</a><a href="#deliver">projects</a><a href="#exploit">write-ups</a><a href="#creds">credentials</a><a href="#path">roadmap</a><button id="cb" type="button">/ console</button></nav></header>
+<ol class="rail" id="rail" aria-label="Sections"></ol>
+<main>
+<section class="hero" id="top"><canvas id="g" role="img" aria-label="Interactive network graph. Click hosts to compromise them."></canvas>
+<div class="hc"><p class="edition">OPERATOR PORTFOLIO / 04</p><p class="tag">red team · penetration testing · network pentesting</p>
+<h1 id="h1">Think like<em>the attacker.</em></h1>
+<p class="lead">I'm <b>Abdulrahman Ghanayem</b> (<b>@u2cxe</b>), a Networks and Cybersecurity student in Jordan building toward red team operations. CCNA certified. The graph on this page is a toy network. Take it over.</p>
+<div class="btns"><a class="btn" href="#creds">See credentials</a><a class="btn g" href="#path">Roadmap</a></div></div>
+<div class="hud"><b id="own">0</b>/14 hosts owned<span id="hint">click edge-fw to get a foothold</span><button id="rs" type="button">reset</button></div><div id="log" aria-live="polite"></div>
+<div id="win"><b>Domain admin obtained.</b> <span id="wt"></span><br>That was a lab network. If you need someone to test yours (authorized, in scope), <a href="#contact">let's talk</a>.</div></section>
+
+<section class="sec" id="recon" data-l="recon"><div class="rv"><p class="ph">phase 1: recon</p><h2>Who is behind u2cxe</h2></div>
+<div class="about"><div class="rv" style="--i:1"><p>I'm a second-year student at <b>Al-Ahliyya Amman University</b> specializing in <b>Networks and Cybersecurity</b>. Attackers live in the network, so I started there and earned my <b>CCNA</b> first.</p><p>My focus is <b>red team</b>, penetration testing and network pentesting. I learn on legal labs only and document what I find.</p></div>
+<div class="rv stats" style="--i:2;margin:0"><div><b data-n="4.0">0</b><small>GPA</small></div><div><b>#1</b><small>cohort rank</small></div><div><b data-n="2">0</b><small>credentials</small></div></div></div></section>
+
+<section class="sec" id="weapon" data-l="weaponize"><div class="rv"><p class="ph">phase 2: weaponize</p><h2>Skills I'm building</h2><p class="sub">The CCNA is my foundation. Offensive skills grow with every lab and will be listed here as I prove them.</p></div>
+<div class="grid"><div class="card rv" style="--i:1"><h3>Networking</h3><p>Routing, switching, IP services and connectivity on Cisco gear.</p><div class="chips"><span>IP addressing</span><span>VLANs</span><span>Routing</span><span>Cisco CLI</span></div></div>
+<div class="card rv" style="--i:2"><h3>Security foundations</h3><p>Access control, wireless security and device hardening.</p><div class="chips"><span>ACLs</span><span>WPA3</span><span>Port security</span></div></div>
+<div class="card rv" style="--i:3"><h3>Automation</h3><p>Scripting security tooling.</p><div class="chips"><span>Python</span><span>Linux</span></div></div></div><div class="rv"><h3 class="th">My toolkit</h3><div class="tl" id="tl"></div><div class="card" id="tp"></div></div></section>
+
+<section class="sec" id="deliver" data-l="deliver"><div class="rv"><p class="ph">phase 3: deliver</p><h2>Projects</h2><p class="sub">Tools and lab work I've built.</p></div>
+<div class="grid"><div class="card empty rv"><b>projects coming soon</b><p>Future security projects and lab work will appear here.</p><a class="btn g" href="https://github.com/u2cxe" target="_blank" rel="noopener" style="margin-top:1rem;align-self:flex-start">Explore GitHub ↗</a></div></div></section>
+
+<section class="sec" id="exploit" data-l="exploit"><div class="rv"><p class="ph">phase 4: exploit</p><h2>Write-ups</h2><p class="sub">Lab and CTF walkthroughs, with the lessons from each.</p></div>
+<div class="grid"><div class="card empty rv"><b>no write-ups yet</b><p>The first one lands after my next lab.</p></div></div></section>
+
+<section class="sec" id="creds" data-l="credentials"><div class="rv"><p class="ph">phase 5: credentials</p><h2>Verified, not claimed</h2><p class="sub">Every credential links to its public verification.</p></div>
+<div class="grid"><article class="card cert rv" id="cc"><img src="certificates/ccna-logo.jpg" alt="Cisco CCNA badge"><div><span class="ver">● verifiable on Credly</span><h3>Cisco Certified Network Associate</h3>
+<dl><dt>issuer</dt><dd>Cisco</dd><dt>certified</dt><dd>October 22, 2026</dd><dt>valid through</dt><dd>October 22, 2029</dd><dt>cisco id</dt><dd>CSCO15316021</dd><dt>status</dt><dd id="cs">active</dd></dl>
+<div class="btns"><button class="btn g" id="vc" type="button">View certificate</button><a class="btn" href="https://www.credly.com/badges/c65eaa71-bf42-41cf-a7da-48c163c7983a/" target="_blank" rel="noopener">Verify on Credly</a></div></div></article>
+<article class="card cert rv" id="pre-security" style="--i:1"><div class="presec-mark" aria-hidden="true"><span>THM</span><strong>PRE<br>SECURITY</strong><small>PATH COMPLETE</small></div><div><span class="ver">● verifiable on TryHackMe</span><h3>TryHackMe Pre Security</h3><p class="presec-summary">A completed learning path in networking, web technologies, operating systems, and cybersecurity foundations.</p><dl><dt>issuer</dt><dd>TryHackMe</dd><dt>completed</dt><dd>November 10, 2026</dd><dt>duration</dt><dd>19 hours 10 minutes</dd><dt>certificate id</dt><dd>THM-FCIVX6ONXE</dd><dt>type</dt><dd>Learning path completion</dd></dl><div class="btns"><button class="btn g" id="view-presec" type="button" aria-haspopup="dialog" aria-controls="presec-dialog">View certificate</button><a class="btn" href="https://tryhackme.com/certificate/THM-FCIVX6ONXE" target="_blank" rel="noopener">Verify on TryHackMe</a></div></div></article>
+<div class="card empty rv" style="--i:1"><b>eJPT</b><p>In progress.</p></div><div class="card empty rv" style="--i:2"><b>OSCP</b><p>Planned.</p></div></div></section>
+
+<section class="sec" id="path" data-l="objectives"><div class="rv"><p class="ph">phase 6: objectives</p><h2>The path to red team</h2></div>
+<ol class="road"><li class="d rv"><h3>Cisco CCNA<small>done</small></h3><p>Networking fundamentals, certified October 2026.</p></li><li class="d rv"><h3>TryHackMe Pre Security<small>done</small></h3><p>Completed November 10, 2026 · 19h 10m. Networking, operating systems, web and security foundations.</p></li><li class="d rv"><h3>TryHackMe Cyber Security 101<small>done</small></h3><p>The security fundamentals path, from tools to defensive and offensive basics.</p></li><li class="d rv"><h3>TryHackMe Junior Penetration Tester (PT1)<small>done</small></h3><p>A full pentest workflow: enumeration, exploitation and reporting.</p></li><li class="n rv"><h3>INE eJPT<small>in progress</small></h3><p>Hands-on junior penetration tester certification. This is where I am now.</p></li><li class="rv"><h3>TryHackMe Web Application Pentesting<small>next</small></h3><p>Web attack techniques, lab by lab.</p></li><li class="rv"><h3>INE eWPTX<small>next</small></h3><p>Advanced web application penetration testing.</p></li><li class="rv"><h3>HTB CPTS<small>next</small></h3><p>Hack The Box Certified Penetration Testing Specialist.</p></li><li class="rv"><h3>OSCP<small>goal</small></h3><p>Offensive Security Certified Professional.</p></li><li class="rv"><h3>Red Teamer<small>goal</small></h3><p>Adversary emulation and advanced operations.</p></li></ol></section>
+
+<section class="sec" id="contact" data-l="contact"><div class="rv"><p class="ph">phase 7: command and control</p><p class="big">Let's talk security.</p><div class="btns"><a class="btn" href="https://www.linkedin.com/in/abdulrahman-ghanayem-6a95833b1/" target="_blank" rel="noopener">LinkedIn</a><a class="btn g" href="https://tryhackme.com/p/u2cxe" target="_blank" rel="noopener">TryHackMe</a><a class="btn g" href="https://github.com/u2cxe" target="_blank" rel="noopener">GitHub</a></div></div></section>
+</main>
+<footer><span>© 2026 Abdulrahman Ghanayem. Press / for the console.</span><span><button id="th" type="button">theme: red</button> <button id="sn" type="button">sound: off</button> <button id="mt" type="button" aria-pressed="false">motion: on</button></span></footer>
+<dialog id="cd"><div class="btns" style="justify-content:space-between"><h3>CCNA certificate</h3><button class="btn g" onclick="cd.close()" type="button">Close</button></div><img class="p" src="certificates/ccna-preview.png" alt="Cisco CCNA certificate"><div class="credential-description"><p class="mini-label">CISCO / ASSOCIATE CERTIFICATION</p><h3>About this certification</h3><p>The Cisco Certified Network Associate (CCNA) certification covers the foundations of modern networking: network access, IP connectivity and services, security fundamentals, and automation and programmability.</p><h3>Skills covered</h3><ul class="credential-skills"><li><strong>Network fundamentals</strong><span>Network components, IP addressing, and subnetting concepts.</span></li><li><strong>Network access</strong><span>Switching, VLANs, and wireless networking concepts.</span></li><li><strong>IP connectivity</strong><span>Routing concepts and how traffic moves between networks.</span></li><li><strong>IP services</strong><span>Essential network services and their role in connectivity.</span></li><li><strong>Security fundamentals</strong><span>Access control and foundational network protection.</span></li><li><strong>Automation &amp; programmability</strong><span>Foundations of network automation and programmable networks.</span></li></ul></div><div class="btns"><a class="btn" href="https://www.credly.com/badges/c65eaa71-bf42-41cf-a7da-48c163c7983a/" target="_blank" rel="noopener">Verify on Credly</a><a class="btn g" href="certificates/ccna-abdulrahman-ghanayem.pdf" target="_blank" rel="noopener">Open PDF</a></div></dialog>
+<dialog id="presec-dialog" aria-labelledby="presec-title"><div class="btns" style="justify-content:space-between"><h3 id="presec-title">Pre Security — Certificate of Completion</h3><button class="btn g" id="close-presec" type="button">Close</button></div><p class="mini-label">TRYHACKME · NOVEMBER 10, 2026 · THM-FCIVX6ONXE</p><img class="p" src="certificates/pre-security-preview.png" alt="Pre Security certificate of completion awarded to Abdelrahman Ghanayem on November 10, 2026"><div class="credential-description"><p class="mini-label">TRYHACKME / LEARNING PATH COMPLETION</p><h3>About this certificate</h3><p>Pre Security builds the technical foundations needed to begin learning cybersecurity. The path introduces how computers and networks work, how websites communicate, and how to work with Linux and Windows. Completed on November 10, 2026, with a course duration of 19 hours and 10 minutes.</p><h3>Skills covered</h3><ul class="credential-skills"><li><strong>Network fundamentals</strong><span>IP addressing, network communication, and common protocols.</span></li><li><strong>How the web works</strong><span>DNS, HTTP, and the interaction between browsers and web servers.</span></li><li><strong>Linux fundamentals</strong><span>Navigating the filesystem and working with basic terminal commands.</span></li><li><strong>Windows fundamentals</strong><span>Understanding the Windows environment, files, and core system features.</span></li><li><strong>Computer fundamentals</strong><span>Operating systems, computer components, and client-server concepts.</span></li><li><strong>Security foundations</strong><span>Core cybersecurity concepts and the foundations for further hands-on learning.</span></li></ul></div><div class="btns"><a class="btn" href="https://tryhackme.com/certificate/THM-FCIVX6ONXE" target="_blank" rel="noopener">Verify on TryHackMe</a><a class="btn g" href="certificates/pre-security-abdulrahman-ghanayem.pdf" target="_blank" rel="noopener">Open PDF</a></div></dialog>
+<dialog id="con"><div id="o"></div><input id="ci" placeholder="type help, then Enter. Esc closes" autocomplete="off" spellcheck="false" aria-label="Console"></dialog>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],B=document.body;let calm=false,R='#ff3d3d',Am='#ffb454',snd=false,AC,t0=0;
+/* boot */
+const bl=$('#bl'),L=['<b>></b> mounting operator console','<b>></b> profile u2cxe ........ loaded','<b>></b> cisco ccna ........... verified','<b>></b> scope: authorized targets only','<b>></b> access granted'];let bi=0,bd=false;
+function endBoot(){if(bd)return;bd=true;$('#boot').classList.add('x');$('#boot').setAttribute('aria-hidden','true');scr($('#h1 em'))}
+(function t(){if(bd)return;if(bi<L.length){bl.innerHTML+=L[bi++]+'<br>';setTimeout(t,380)}else setTimeout(endBoot,500)})();
+addEventListener('keydown',endBoot);$('#boot').onclick=endBoot;
+/* scramble */
+function scr(el){if(calm||!el)return;const t=el.dataset.t||(el.dataset.t=el.textContent),c='01#$%&@<>/';let i=0;clearInterval(el._v);el._v=setInterval(()=>{el.textContent=[...t].map((k,n)=>n<i||k===' '?k:c[Math.random()*c.length|0]).join('');if((i+=.6)>=t.length){el.textContent=t;clearInterval(el._v)}},30)}
+$('#h1 em').onpointerenter=()=>scr($('#h1 em'));
+function beep(f){if(!snd)return;try{AC=AC||new AudioContext();const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;g.gain.value=.05;o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,AC.currentTime+.15);o.stop(AC.currentTime+.16)}catch{}}
+$$('.brand').forEach(e=>e.onpointerenter=()=>{if(calm)return;const t=e.textContent,c='01#$%&@';let i=0;const v=setInterval(()=>{e.textContent=[...t].map((k,n)=>n<i?k:c[Math.random()*7|0]).join('');if(++i>t.length){e.textContent=t;clearInterval(v)}},40)});
+/* Native cursor remains visible in dialogs; animated trail is in upgrade.js. */
+$('#rg')?.remove();
+/* graph */
+const g=$('#g'),x=g.getContext('2d');
+const N=[['edge-fw',.46,.5],['dmz-web',.56,.28],['vpn-gw',.56,.72],['mail',.67,.12],['file-srv',.68,.45],['dc01',.8,.3],['sql-db',.67,.8],['jump-box',.78,.58],['hr-pc',.9,.12],['dev-vm',.92,.45],['backup',.8,.88],['dc02',.91,.72],['ci-runner',.79,.1],['admin-ws',.92,.28]];
+const E=[[0,1],[0,2],[0,4],[1,3],[1,4],[3,12],[12,8],[12,5],[4,5],[4,7],[2,6],[2,4],[6,10],[7,10],[7,11],[7,9],[5,13],[13,9],[9,11],[8,13]];
+const A=N.map(()=>[]);E.forEach(([a,b])=>{A[a].push(b);A[b].push(a)});
+let W,H,P=[],own=new Set(),pk=[],hv=-1,won=false;
+function lay(){const d=Math.min(devicePixelRatio||1,2);W=g.clientWidth;H=g.clientHeight;g.width=W*d;g.height=H*d;x.setTransform(d,0,0,d,0,0);
+ P=N.map(n=>W<820?[W*(.08+(n[1]-.45)/.5*.84),H*.56+n[2]*H*.38]:[W*n[1],H*.1+n[2]*H*.72])}
+lay();addEventListener('resize',lay);
+const can=i=>!own.has(i)&&(own.size?A[i].some(j=>own.has(j)):i===0);
+function at(e){const r=g.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;return P.findIndex(p=>Math.hypot(p[0]-mx,p[1]-my)<24)}
+g.addEventListener('pointermove',e=>{hv=at(e);g.style.cursor=hv>=0&&can(hv)?'pointer':''});g.addEventListener('pointerleave',()=>hv=-1);
+g.addEventListener('click',e=>{const i=at(e);if(i<0||!can(i)||pk.some(k=>k.b===i))return;
+ if(!own.size)take(i,-1);else pk.push({a:A[i].find(j=>own.has(j)),b:i,t:0})});
+function lg(t){const l=$('#log'),d=document.createElement('div');d.textContent=new Date().toTimeString().slice(0,8)+'  '+t;l.append(d);while(l.children.length>4)l.firstChild.remove()}
+function take(i,f){if(own.has(i))return;own.add(i);if(!t0)t0=performance.now();$('#own').textContent=own.size;beep(300+own.size*45);
+ lg(f<0?'foothold on '+N[i][0]+' (initial access)':'pivot '+N[f][0]+' > '+N[i][0]);
+ $('#hint').textContent=own.size===N.length?'all hosts owned':i===5?'dc01 owned. finish the network':'pivot to a highlighted neighbor';
+ if(own.size===N.length){won=true;const s=((performance.now()-t0)/1e3).toFixed(1);let b=s;try{b=Math.min(+s,+(localStorage.getItem('best')||s)).toFixed(1);localStorage.setItem('best',b)}catch{}
+  $('#wt').textContent='Time '+s+'s, best '+b+'s.';$('#win').classList.add('on');beep(880)}}
+function rst(){own.clear();pk=[];won=false;t0=0;$('#own').textContent=0;$('#log').textContent='';$('#win').classList.remove('on');$('#hint').textContent='click edge-fw to get a foothold'}
+$('#rs').onclick=rst;
+const S=['22 ssh, 443 https','80 http, 8080','1194 vpn, 443','25 smtp, 587','445 smb, 139','88 kerberos, 389 ldap','3306 mysql','22 ssh, 3389 rdp','445 smb','22 ssh, 5000','873 rsync','88 kerberos, 389 ldap','8080 jenkins','3389 rdp'];
+function draw(tm){requestAnimationFrame(draw);if(document.hidden)return;x.clearRect(0,0,W,H);const pu=calm?0:Math.sin(tm/300);
+ E.forEach(([a,b])=>{const o=own.has(a)&&own.has(b);x.strokeStyle=o?R:'#4a3438';x.globalAlpha=o?.9:.4;x.lineWidth=o?1.6:1;x.beginPath();x.moveTo(...P[a]);x.lineTo(...P[b]);x.stroke()});
+ pk=pk.filter(k=>{k.t+=calm?1:.03;const[a,b]=[P[k.a],P[k.b]];x.globalAlpha=1;x.fillStyle=Am;x.shadowColor=Am;x.shadowBlur=14;x.beginPath();x.arc(a[0]+(b[0]-a[0])*k.t,a[1]+(b[1]-a[1])*k.t,4,0,6.3);x.fill();x.shadowBlur=0;if(k.t>=1){take(k.b,k.a);return false}return true});
+ P.forEach((p,i)=>{const o=own.has(i),c=can(i);x.globalAlpha=1;
+  if(c){x.strokeStyle=Am;x.lineWidth=1.5;x.beginPath();x.arc(p[0],p[1],14+pu*3+(hv===i?4:0),0,6.3);x.stroke()}
+  x.fillStyle=o?R:c?'#2a1c1e':'#1d1415';x.strokeStyle=o?R:'#6b5a58';x.lineWidth=1.5;if(o){x.shadowColor=R;x.shadowBlur=18}
+  x.beginPath();x.arc(p[0],p[1],o?9:7,0,6.3);x.fill();x.stroke();x.shadowBlur=0;
+  if(o||c||hv===i){x.fillStyle=o?'#f1e9e2':'#a08f8a';x.font='11px IBM Plex Mono,monospace';x.fillText(N[i][0],p[0]+14,p[1]-12);if(hv===i){x.fillStyle=Am;x.fillText('ports: '+S[i],p[0]+14,p[1]+6)}}})}
+requestAnimationFrame(draw);
+/* reveal, counters, rail, progress */
+const rail=$('#rail');$$('.sec').forEach(s=>{const a=document.createElement('a');a.href='#'+s.id;a.textContent=s.dataset.l;const li=document.createElement('li');li.append(a);rail.append(li)});
+const cnt=el=>{const t=+el.dataset.n,f=el.dataset.n.includes('.')?1:0,s=performance.now();(function u(n){const p=Math.min((n-s)/1300,1);el.textContent=(t*p).toFixed(f);if(p<1)requestAnimationFrame(u)})(s)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(cnt);io.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(e=>io.observe(e));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$('.rail a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});$$('.sec').forEach(s=>so.observe(s));
+addEventListener('scroll',()=>{const h=document.documentElement;$('#pg').style.width=h.scrollTop/(h.scrollHeight-h.clientHeight)*100+'%'},{passive:true});
+/* tilt + holo shine */
+$$('.card').forEach(c=>{c.addEventListener('pointermove',e=>{if(calm||e.pointerType!=='mouse')return;const r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;c.style.transform=`perspective(900px) rotateX(${(.5-py)*7}deg) rotateY(${(px-.5)*7}deg)`;c.style.setProperty('--mx',px*100+'%');c.style.setProperty('--my',py*100+'%')});c.addEventListener('pointerleave',()=>c.style.transform='')});
+/* dialogs + console */
+$('#vc').onclick=()=>$('#cd').showModal();
+$('#view-presec').onclick=()=>$('#presec-dialog').showModal();
+$('#close-presec').onclick=()=>$('#presec-dialog').close();
+const con=$('#con'),o=$('#o'),ci=$('#ci'),H2=[];let hi=0;
+const out=(t)=>{const d=document.createElement('div');d.textContent=t;o.append(d);o.scrollTop=1e5};
+const LK={linkedin:'https://www.linkedin.com/in/abdulrahman-ghanayem-6a95833b1/',tryhackme:'https://tryhackme.com/p/u2cxe',github:'https://github.com/u2cxe',credly:'https://www.credly.com/badges/c65eaa71-bf42-41cf-a7da-48c163c7983a/'};
+const C={help:()=>'whoami  certs  roadmap  links  open <site>  tools  theme  hack  clear',whoami:()=>'Abdulrahman Ghanayem (u2cxe)\nNetworks and Cybersecurity student. Red team track.',
+ certs:()=>'[+] TryHackMe Pre Security, completed 2026-11-10 (19h 10m)\n[+] CCNA, Cisco, valid to 2029-10-22\n[ ] eJPT, in progress\n[ ] OSCP, planned',roadmap:()=>'CCNA > THM Pre Security > THM CS101 > THM PT1 > eJPT (now) > THM WebApp > eWPTX > HTB CPTS > OSCP > Red Teamer',
+ links:()=>Object.entries(LK).map(([k,v])=>k.padEnd(10)+v).join('\n'),open:a=>LK[a]?(open(LK[a],'_blank','noopener'),'opening '+a):'usage: open '+Object.keys(LK).join('|'),
+ tools:()=>Object.keys(T).join('  '),theme:()=>(th(),'theme: '+(B.classList.contains('ice')?'ice':'red')),hack:()=>{con.close();scrollTo({top:0});return ''},sudo:()=>'nice try. permission denied.',clear:()=>{o.textContent='';return ''}};
+function oc(){con.showModal();if(!o.textContent)out('Operator console. Type help.');ci.focus()}
+$('#cb').onclick=oc;addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')&&bd){e.preventDefault();oc()}});
+ci.addEventListener('keydown',e=>{if(e.key==='Enter'){const v=ci.value.trim();ci.value='';if(!v)return;H2.push(v);hi=H2.length;out('> '+v);const[c,...r]=v.split(/\s+/),f=Object.hasOwn(C,c.toLowerCase())?C[c.toLowerCase()]:null,s=f?f(r[0]):'command not found: '+c;if(s)out(s)}else if(e.key==='ArrowUp'&&hi>0)ci.value=H2[--hi];else if(e.key==='ArrowDown')ci.value=H2[++hi]||''});
+/* motion toggle */
+$('#mt').onclick=function(){calm=!calm;B.classList.toggle('calm',calm);this.textContent='motion: '+(calm?'off':'on');this.setAttribute('aria-pressed',calm)};
+
+/* extras */
+const dn=Math.floor((Date.now()-new Date('2026-10-22'))/864e5);$('#cs').textContent=dn>0?'active, certified '+dn+' days ago':'active';
+addEventListener('pointermove',e=>{B.style.setProperty('--sx',e.clientX+'px');B.style.setProperty('--sy',e.clientY+'px')});
+$$('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{if(calm||e.pointerType!=='mouse')return;const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.3}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')});
+const T={Nmap:['Network scanner','Finds live hosts, open ports and service versions. The first step of most recon.'],Wireshark:['Packet analyzer','Captures traffic so you can see exactly what crosses the wire.'],'Burp Suite':['Web proxy','Intercepts and modifies web requests to test applications.'],Metasploit:['Exploitation framework','Organizes exploits and payloads for authorized testing.'],Gobuster:['Content discovery','Brute-forces directories and files on web servers.'],Hashcat:['Password recovery','Tests how well password hashes resist cracking.'],BloodHound:['AD attack paths','Maps Active Directory relationships to find privilege escalation routes.']};
+const tl=$('#tl'),tp=$('#tp');function ts(k){tp.replaceChildren();const h=document.createElement('h3'),p=document.createElement('p'),s=document.createElement('div');h.textContent=k+' | '+T[k][0];p.textContent=T[k][1];s.className='chips';const badge=document.createElement('span');const proficient=['Nmap','Wireshark'].includes(k);badge.textContent=proficient?'status: completed · proficient':'status: learning';badge.className=proficient?'tool-proficient':'';s.append(badge);tp.append(h,p,s);$$('#tl button').forEach(b=>b.classList.toggle('on',b.textContent===k));beep(520)}
+Object.keys(T).forEach(k=>{const b=document.createElement('button');b.type='button';b.textContent=k;b.onclick=()=>ts(k);tl.append(b)});ts('Nmap');
+function th(){B.classList.toggle('ice');const c=getComputedStyle(B);R=c.getPropertyValue('--red').trim();Am=c.getPropertyValue('--amb').trim();$('#th').textContent='theme: '+(B.classList.contains('ice')?'ice':'red')}
+$('#th').onclick=th;$('#sn').onclick=function(){snd=!snd;this.textContent='sound: '+(snd?'on':'off');beep(660)};
+</script><script src="upgrade.js"></script><script src="interactive.js"></script></body></html>
+
