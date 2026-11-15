@@ -70,6 +70,6 @@
   const top=el('button','back-top','↑');top.type='button';top.setAttribute('aria-label','Back to top');top.onclick=()=>window.scrollTo({top:0,behavior:calm?'instant':'smooth'});B.append(top);const showTop=()=>top.hidden=scrollY<600;addEventListener('scroll',showTop,{passive:true});showTop();
   // Reveal new content and preserve cursor handling inside modal top layers.
   [identity,lab.querySelector('.lab-heading'),lab.querySelector('.lab-shell'),quiz].forEach(n=>{n.classList.add('rv');io.observe(n);});
-  const li=el('li'),a=el('a','','packet lab');a.href='#packet-lab';li.append(a);q('#rail').children[1].after(li);so.observe(lab);
+  const li=el('li'),a=el('a','','packet lab');a.href='#packet-lab';li.append(a);q('#rail a[href="#weapon"]').parentElement.after(li);so.observe(lab);
   document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target!==d)return;const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}));
 })();

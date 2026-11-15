@@ -73,7 +73,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;bac
 .th{font:700 1rem var(--d);margin:3rem 0 1rem}#tp{min-height:120px}#tp h3{animation:fi .4s}
 .calm *,.calm *::before,.calm *::after{animation:none!important;transition:none!important}.calm .rv{opacity:1!important;transform:none!important}
 @media(max-width:820px){nav a,.rail,#log{display:none}.about{grid-template-columns:1fr}.cert{grid-template-columns:1fr}.hc{max-width:none}.hero{align-items:flex-start}}
-</style><link rel="stylesheet" href="upgrade.css"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0b0809"><link rel="stylesheet" href="interactive.css"></head><body>
+</style><link rel="stylesheet" href="upgrade.css"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0b0809"><link rel="stylesheet" href="interactive.css"><link rel="stylesheet" href="achievements.css"></head><body>
 <div id="boot"><div id="bl"></div><small>press any key to skip</small></div>
 <div class="prog" id="pg"></div><div class="ring" id="rg" aria-hidden="true"></div>
 <header><a class="brand" href="#top">u2cxe<i>@</i>redteam</a><nav><a href="#recon">about</a><a href="#weapon">skills</a><a href="#deliver">projects</a><a href="#exploit">write-ups</a><a href="#creds">credentials</a><a href="#path">roadmap</a><button id="cb" type="button">/ console</button></nav></header>
@@ -90,6 +90,11 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;bac
 <section class="sec" id="recon" data-l="recon"><div class="rv"><p class="ph">phase 1: recon</p><h2>Who is behind u2cxe</h2></div>
 <div class="about"><div class="rv" style="--i:1"><p>I'm a second-year student at <b>Al-Ahliyya Amman University</b> specializing in <b>Networks and Cybersecurity</b>. Attackers live in the network, so I started there and earned my <b>CCNA</b> first.</p><p>My focus is <b>red team</b>, penetration testing and network pentesting. I learn on legal labs only and document what I find.</p></div>
 <div class="rv stats" style="--i:2;margin:0"><div><b data-n="4.0">0</b><small>GPA</small></div><div><b>#1</b><small>cohort rank</small></div><div><b data-n="2">0</b><small>credentials</small></div></div></div></section>
+
+<section class="sec achievements" id="achievements" data-l="achievements" aria-labelledby="achievements-title">
+<div class="achievements-top rv"><div><p class="ph">field notes / tryhackme</p><h2 id="achievements-title">Practice.<br>Progress. Repeat.</h2></div><p class="sub">Every room is another problem solved. A snapshot of my hands-on learning journey.</p></div>
+<div class="achievement-console rv"><div class="achievement-toolbar"><span><i></i>u2cxe / TRYHACKME</span><span>LEARNING RECORD</span></div><div id="achievement-tabs" role="tablist" aria-label="TryHackMe achievements"></div><div id="achievement-panel" role="tabpanel" tabindex="0"><div class="achievement-story"><p class="mini-label" id="achievement-caption"></p><h3 id="achievement-title"></h3><p id="achievement-copy"></p><a data-thm-link href="https://tryhackme.com/p/u2cxe" target="_blank" rel="noopener">Explore my TryHackMe profile ↗</a></div><div id="achievement-art" aria-hidden="true"></div></div><div class="achievement-bottom"><span id="thm-date"></span><span>Select a stat to explore ↗</span></div></div>
+</section>
 
 <section class="sec" id="weapon" data-l="weaponize"><div class="rv"><p class="ph">phase 2: weaponize</p><h2>Skills I'm building</h2><p class="sub">The CCNA is my foundation. Offensive skills grow with every lab and will be listed here as I prove them.</p></div>
 <div class="grid"><div class="card rv" style="--i:1"><h3>Networking</h3><p>Routing, switching, IP services and connectivity on Cisco gear.</p><div class="chips"><span>IP addressing</span><span>VLANs</span><span>Routing</span><span>Cisco CLI</span></div></div>
@@ -198,5 +203,5 @@ const tl=$('#tl'),tp=$('#tp');function ts(k){tp.replaceChildren();const h=docume
 Object.keys(T).forEach(k=>{const b=document.createElement('button');b.type='button';b.textContent=k;b.onclick=()=>ts(k);tl.append(b)});ts('Nmap');
 function th(){B.classList.toggle('ice');const c=getComputedStyle(B);R=c.getPropertyValue('--red').trim();Am=c.getPropertyValue('--amb').trim();$('#th').textContent='theme: '+(B.classList.contains('ice')?'ice':'red')}
 $('#th').onclick=th;$('#sn').onclick=function(){snd=!snd;this.textContent='sound: '+(snd?'on':'off');beep(660)};
-</script><script src="upgrade.js"></script><script src="interactive.js"></script></body></html>
+</script><script src="upgrade.js"></script><script src="interactive.js"></script><script src="achievements.js"></script></body></html>
 
