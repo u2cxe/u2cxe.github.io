@@ -31,3 +31,10 @@ Top 7% / 24 Badges / 100+ Rooms.
 أضيفت لوحة تفاعلية، عدادات متحركة، حلقة مضيئة وشبكة الغرف وحركات الأزرار والعناوين والشهادات.
 أمر stats في الكونسول يعرض الإحصائيات. الحركة شغالة تلقائياً عند كل تحميل.
 ارفع محتويات ZIP كلها، بما فيها achievements.js و achievements.css، مع استبدال الملفات السابقة.
+
+
+V5 — Academic Excellence Award
+أضيفت شهادة التفوق في قسم Achievements & Awards، بمعدل 4/4 وتخصص Networks & Cybersecurity للعام 2024/2025.
+صورة الشهادة الأصلية داخل certificates/academic-excellence-2024-2025.jpg.
+التعديل: بيانات البطاقة والنافذة داخل index.html، التنسيق داخل awards.css، والتفاعل وأمر awards داخل awards.js.
+ارفع محتويات النسخة كاملة مع مجلد certificates والملفات الجديدة.

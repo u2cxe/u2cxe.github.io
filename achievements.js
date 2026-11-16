@@ -40,7 +40,7 @@ const THM_PROFILE = { topPercent: 7, badges: 24, rooms: 100, roomsSuffix: '+', u
   C.stats=()=>`TryHackMe @u2cxe\nTop ${THM_PROFILE.topPercent}% globally\n${THM_PROFILE.badges} badges earned\n${THM_PROFILE.rooms}${THM_PROFILE.roomsSuffix} rooms completed\nUpdated: ${THM_PROFILE.updated}\n${THM_PROFILE.url}`;
   const oldHelp=C.help;C.help=()=>oldHelp()+'  stats';
   const quick=document.createElement('button');quick.type='button';quick.className='control';quick.textContent='stats';quick.onclick=()=>{ci.value='stats';ci.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}));ci.focus();};q('.console-shortcuts').append(quick);
-  const navLink=document.createElement('a');navLink.href='#achievements';navLink.textContent='achievements';q('nav a[href="#weapon"]').after(navLink);
+  const navLink=document.createElement('a');navLink.href='#achievements';navLink.textContent='awards';q('nav a[href="#weapon"]').after(navLink);
   navLink.onclick=()=>{q('nav').classList.remove('expanded');q('#mobile-menu').setAttribute('aria-expanded','false');q('#mobile-menu').textContent='Menu +';};
   // Keyboard-accessible tab controls are mirrored in the section navigator.
 
