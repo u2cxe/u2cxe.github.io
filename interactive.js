@@ -63,7 +63,7 @@
   const shortcuts=el('div','console-shortcuts');['whoami','certs','tools','lab'].forEach(command=>{const b=el('button','control',command);b.type='button';b.onclick=()=>{ci.value=command;ci.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}));ci.focus();};shortcuts.append(b);});q('#ci').before(shortcuts);
   q('#con').setAttribute('aria-label','u2cxe — operator console');
   const consoleTitle=el('h3','console-title','u2cxe — operator console');q('#o').before(consoleTitle);
-  sections.splice(3,0,['packet-lab','Interactive packet lab']);sections.find(x=>x[0]==='creds')[1]='CCNA and Pre Security credentials';
+  sections.splice(3,0,['packet-lab','Interactive packet lab']);sections.find(x=>x[0]==='creds')[1]='CCNA, Pre Security and Cyber Security 101 credentials';
   C.packets=()=>{con.close();lab.scrollIntoView({behavior:calm?'instant':'smooth'});return '';};
   C.help=()=> 'whoami  certs  roadmap  links  open <site>  tools  theme  hack  lab  packets  search  clear';
   const labLink=el('a','','Packet lab ↗');labLink.href='#packet-lab';labLink.className='btn g';q('.hero .btns').append(labLink);

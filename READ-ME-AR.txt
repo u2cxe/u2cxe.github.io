@@ -25,7 +25,7 @@ upgrade.js و upgrade.css: تحسينات النسخة السابقة.
 
 
 تحديث V4 — إنجازات TryHackMe:
-Top 7% / 24 Badges / 100+ Rooms.
+Top 5% / 27 Badges / 100+ Rooms.
 الأرقام حسب تحديثك بتاريخ 15 نوفمبر 2026، وليست مرتبطة بواجهة تحديث مباشر.
 لتغييرها لاحقاً عدّل THM_PROFILE في أول ملف achievements.js.
 أضيفت لوحة تفاعلية، عدادات متحركة، حلقة مضيئة وشبكة الغرف وحركات الأزرار والعناوين والشهادات.
@@ -38,3 +38,11 @@ V5 — Academic Excellence Award
 صورة الشهادة الأصلية داخل certificates/academic-excellence-2024-2025.jpg.
 التعديل: بيانات البطاقة والنافذة داخل index.html، التنسيق داخل awards.css، والتفاعل وأمر awards داخل awards.js.
 ارفع محتويات النسخة كاملة مع مجلد certificates والملفات الجديدة.
+
+
+V6 — Cyber Security 101
+أضيفت شهادة إكمال مسار Cyber Security 101 بتاريخ 17 نوفمبر 2026، المدة 45 ساعة و23 دقيقة.
+رقم الشهادة: THM-UOSTUCM3TN
+رابط التحقق: https://tryhackme.com/certificate/THM-UOSTUCM3TN
+إحصائيات TryHackMe: Top 5% و27 Badge و100+ غرفة، بتاريخ 17 نوفمبر 2026.
+ارفع محتويات هذه النسخة كاملة، خصوصاً index.html و achievements.js و interactive.js ومجلد certificates.
