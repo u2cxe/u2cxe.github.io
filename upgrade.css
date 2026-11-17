@@ -5,3 +5,6 @@
 
 /* Pre Security credential */
 .presec-mark{width:110px;min-height:132px;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:13px;border:1px solid var(--red);border-radius:10px;background:linear-gradient(145deg,#421b24,#160f14);font-family:var(--m);color:var(--ink);box-shadow:0 0 25px #ff3d3d14}.presec-mark>span{font-size:13px;letter-spacing:3px;color:var(--amb)}.presec-mark strong{font-size:15px;line-height:1.5}.presec-mark small{font-size:8px;letter-spacing:1px;color:var(--dim)}.presec-summary{color:var(--dim);font-size:14px;line-height:1.8;margin:10px 0;max-width:670px}#presec-dialog{scrollbar-color:var(--red) var(--pan)}#presec-dialog .mini-label{margin:16px 0}#presec-dialog h3{overflow-wrap:anywhere}#pre-security dd{overflow-wrap:anywhere}
+
+/* V9.1: compositor-only trail; native arrow stays immediate. */
+.neon-trail{transition:none}.neon-trail i{left:0;top:0;transition:none;will-change:transform;box-shadow:0 0 5px #ff4c6d;contain:layout style}

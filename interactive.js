@@ -10,7 +10,7 @@
   q('#recon .about').before(identity);
   const ticker=el('div','signal-strip');ticker.setAttribute('aria-hidden','true');
   ticker.innerHTML='<div>'+Array.from({length:2},()=>'<span>NETWORK INTELLIGENCE</span><i>✳</i><span>THINK OFFENSIVELY</span><i>✳</i><span>LEARN. TEST. REPEAT.</span><i>✳</i><span>U2CXE</span><i>✳</i>').join('')+'</div>';
-  q('.mission-panel').after(ticker);
+  q('.hero').after(ticker);
 
   // Protocol lab: every frame is deterministic, selectable and explained.
   const protocols={

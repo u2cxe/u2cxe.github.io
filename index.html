@@ -73,19 +73,18 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;bac
 .th{font:700 1rem var(--d);margin:3rem 0 1rem}#tp{min-height:120px}#tp h3{animation:fi .4s}
 .calm *,.calm *::before,.calm *::after{animation:none!important;transition:none!important}.calm .rv{opacity:1!important;transform:none!important}
 @media(max-width:820px){nav a,.rail,#log{display:none}.about{grid-template-columns:1fr}.cert{grid-template-columns:1fr}.hc{max-width:none}.hero{align-items:flex-start}}
-</style><link rel="stylesheet" href="upgrade.css"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0b0809"><link rel="stylesheet" href="interactive.css"><link rel="stylesheet" href="achievements.css"><link rel="stylesheet" href="awards.css"><link rel="stylesheet" href="refinement.css"></head><body>
+</style><link rel="stylesheet" href="upgrade.css"><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0b0809"><link rel="stylesheet" href="interactive.css"><link rel="stylesheet" href="achievements.css"><link rel="stylesheet" href="awards.css"><link rel="stylesheet" href="refinement.css"><link rel="stylesheet" href="terminal.css"><link rel="stylesheet" href="motion.css"><link rel="stylesheet" href="cursor.css"><link rel="stylesheet" href="spark.css"></head><body>
 <div id="boot"><div id="bl"></div><small>press any key to skip</small></div>
 <div class="prog" id="pg"></div><div class="ring" id="rg" aria-hidden="true"></div>
 <header><a class="brand" href="#top">u2cxe<i>@</i>redteam</a><nav><a href="#recon">about</a><a href="#weapon">skills</a><a href="#deliver">projects</a><a href="#exploit">write-ups</a><a href="#creds">credentials</a><a href="#path">roadmap</a><button id="cb" type="button">/ console</button></nav></header>
 <ol class="rail" id="rail" aria-label="Sections"></ol>
 <main>
-<section class="hero" id="top"><canvas id="g" role="img" aria-label="Interactive network graph. Click hosts to compromise them."></canvas>
+<section class="hero" id="top">
 <div class="hc"><p class="edition">OPERATOR PORTFOLIO / 04</p><p class="tag">red team · penetration testing · network pentesting</p>
 <h1 id="h1">Think like<em>the attacker.</em></h1>
-<p class="lead">I'm <b>Abdulrahman Ghanayem</b> (<b>@u2cxe</b>), a Networks and Cybersecurity student in Jordan building toward red team operations. CCNA certified. The graph on this page is a toy network. Take it over.</p>
+<p class="lead">I'm <b>Abdulrahman Ghanayem</b> (<b>@u2cxe</b>), a Networks and Cybersecurity student in Jordan building toward red team operations. CCNA certified. Explore my profile in the terminal, then try the interactive labs below.</p>
 <div class="btns"><a class="btn" href="#creds">See credentials</a><a class="btn g" href="#path">Roadmap</a></div></div>
-<div class="hud"><b id="own">0</b>/14 hosts owned<span id="hint">click edge-fw to get a foothold</span><button id="rs" type="button">reset</button></div><div id="log" aria-live="polite"></div>
-<div id="win"><b>Domain admin obtained.</b> <span id="wt"></span><br>That was a lab network. If you need someone to test yours (authorized, in scope), <a href="#contact">let's talk</a>.</div></section>
+<div class="hero-terminal" role="region" aria-label="Interactive portfolio terminal"><div class="hero-terminal-bar"><strong><span class="cli-lights" aria-hidden="true">● ● ●</span> u2cxe — operator console</strong><span>PROFILE / CLI</span></div><div id="hero-output" class="cli-output" role="log" aria-live="polite" aria-relevant="additions text" tabindex="0"></div><form id="hero-cli-form"><label for="hero-command">u2cxe:~$</label><input id="hero-command" name="command" aria-label="Portfolio command" placeholder="Type help…" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="300"><button type="submit" aria-label="Run command">↵</button></form><p class="cli-prompt-hint">TRY A COMMAND</p><div id="hero-cli-suggestions" role="group" aria-label="Suggested commands"></div><p class="cli-note">Interactive portfolio · ↑ ↓ command history · Tab autocomplete<br>Commands explore this profile; they do not run on your device.</p></div></section>
 
 <section class="sec" id="recon" data-l="recon"><div class="rv"><p class="ph">phase 1: recon</p><h2>Who is behind u2cxe</h2></div>
 <div class="about"><div class="rv" style="--i:1"><p>I'm a second-year student at <b>Al-Ahliyya Amman University</b> specializing in <b>Networks and Cybersecurity</b>. Attackers live in the network, so I started there and earned my <b>CCNA</b> first.</p><p>My focus is <b>red team</b>, penetration testing and network pentesting. I learn on legal labs only and document what I find.</p></div>
@@ -105,6 +104,8 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;bac
 <div class="card rv" style="--i:2"><h3>Security foundations</h3><p>Access control, wireless security and device hardening.</p><div class="chips"><span>ACLs</span><span>WPA3</span><span>Port security</span></div></div>
 <div class="card rv" style="--i:3"><h3>Automation</h3><p>Scripting security tooling.</p><div class="chips"><span>Python</span><span>Linux</span></div></div></div><div class="rv"><h3 class="th">My toolkit</h3><div class="tl" id="tl"></div><div class="card" id="tp"></div></div></section>
 
+<section class="sec" id="network-lab" data-l="network lab"><div class="rv"><p class="ph">interactive / network simulation</p><h2>Map. Pivot. Explore.</h2><p class="sub">A simulated network in your browser. Start at edge-fw and follow the connections, or use the host buttons below.</p></div><div id="network-stage"><canvas id="g" role="img" aria-label="Interactive network graph. Click hosts to compromise them."></canvas><div class="hud"><b id="own">0</b>/14 hosts owned<span id="hint">click edge-fw to get a foothold</span><button id="rs" type="button">reset</button></div><div id="log" aria-live="polite"></div>
+<div id="win"><b>Domain admin obtained.</b> <span id="wt"></span><br>That was a lab network. If you need someone to test yours (authorized, in scope), <a href="#contact">let's talk</a>.</div></div></section>
 <section class="sec" id="deliver" data-l="deliver"><div class="rv"><p class="ph">phase 3: deliver</p><h2>Projects</h2><p class="sub">Tools and lab work I've built.</p></div>
 <div class="grid"><div class="card empty rv"><b>projects coming soon</b><p>Future security projects and lab work will appear here.</p><a class="btn g" href="https://github.com/u2cxe" target="_blank" rel="noopener" style="margin-top:1rem;align-self:flex-start">Explore GitHub ↗</a></div></div></section>
 
@@ -151,7 +152,7 @@ const E=[[0,1],[0,2],[0,4],[1,3],[1,4],[3,12],[12,8],[12,5],[4,5],[4,7],[2,6],[2
 const A=N.map(()=>[]);E.forEach(([a,b])=>{A[a].push(b);A[b].push(a)});
 let W,H,P=[],own=new Set(),pk=[],hv=-1,won=false;
 function lay(){const d=Math.min(devicePixelRatio||1,2);W=g.clientWidth;H=g.clientHeight;g.width=W*d;g.height=H*d;x.setTransform(d,0,0,d,0,0);
- P=N.map(n=>W<820?[W*(.08+(n[1]-.45)/.5*.84),H*.56+n[2]*H*.38]:[W*n[1],H*.1+n[2]*H*.72])}
+ P=N.map(n=>[W*(.10+(n[1]-.45)/.5*.72),40+n[2]*(H-190)])}
 lay();addEventListener('resize',lay);
 const can=i=>!own.has(i)&&(own.size?A[i].some(j=>own.has(j)):i===0);
 function at(e){const r=g.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top;return P.findIndex(p=>Math.hypot(p[0]-mx,p[1]-my)<24)}
@@ -212,5 +213,5 @@ const tl=$('#tl'),tp=$('#tp');function ts(k){tp.replaceChildren();const h=docume
 Object.keys(T).forEach(k=>{const b=document.createElement('button');b.type='button';b.textContent=k;b.onclick=()=>ts(k);tl.append(b)});ts('Nmap');
 function th(){B.classList.toggle('ice');const c=getComputedStyle(B);R=c.getPropertyValue('--red').trim();Am=c.getPropertyValue('--amb').trim();$('#th').textContent='theme: '+(B.classList.contains('ice')?'ice':'red')}
 $('#th').onclick=th;$('#sn').onclick=function(){snd=!snd;this.textContent='sound: '+(snd?'on':'off');beep(660)};
-</script><script src="upgrade.js"></script><script src="interactive.js"></script><script src="achievements.js"></script><script src="awards.js"></script></body></html>
+</script><script src="upgrade.js"></script><script src="interactive.js"></script><script src="achievements.js"></script><script src="awards.js"></script><script src="terminal.js"></script><script src="motion.js"></script><script src="precision.js"></script></body></html>
 

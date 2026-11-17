@@ -50,3 +50,146 @@ V6 — Cyber Security 101
 
 V7: Open PDF مباشر على بطاقة Pre Security وCCNA، وإعادة تنسيق بطاقات الشهادات والأزرار والنوافذ.
 ارفع المحتويات كاملة بما فيها refinement.css ومجلد certificates.
+
+
+V8 — Interactive portfolio CLI
+The opening section now contains a typed terminal. The network simulation is below the skills and packet lab sections.
+Commands are local portfolio interactions, not a system shell.
+
+whoami: Abdulrahman Ghanayem, handle, specialization and focus.
+pwd: /home/u2cxe
+ls: profile files and directories.
+cat focus.txt: Red Team · Penetration Tester · Network Pentester
+cat about.txt: education, university and academic excellence.
+cat contact.txt / contact: website, GitHub, TryHackMe and LinkedIn URLs.
+skills: toolkit with learning/proficiency status.
+certs: earned certificates and learning paths.
+stats: Top 5%, 27 badges, 100+ rooms on TryHackMe.
+awards: academic excellence award.
+lab: scroll to network simulation.
+packets: scroll to packet explorer.
+theme: switch red / ice appearance.
+help: list available commands.
+clear: clear terminal output.
+
+Use Up/Down to recall commands; Tab completes a unique match.
+Edit terminal.js to change command responses or suggested buttons.
+Edit terminal.css to change the terminal layout and appearance.
+Upload all ZIP contents to the root of your GitHub Pages repository.
+Keep CNAME, .nojekyll, assets and certificates together with index.html.
+
+V9 Motion edition: perspective lattice and connected particles, pointer parallax, boot-synchronized entrance, orbit rings, animated terminal spectrum, command response transitions, moving edge light, title highlights, section entrances, card spotlight and click waves. Edit motion.js and motion.css to customize. New effects honor the existing Motion toggle; the hero canvas pauses offscreen and while the browser tab is hidden.
+
+
+
+V8 — Interactive portfolio CLI
+The opening section now contains a typed terminal. The network simulation is below the skills and packet lab sections.
+Commands are local portfolio interactions, not a system shell.
+
+whoami: Abdulrahman Ghanayem, handle, specialization and focus.
+pwd: /home/u2cxe
+ls: profile files and directories.
+cat focus.txt: Red Team · Penetration Tester · Network Pentester
+cat about.txt: education, university and academic excellence.
+cat contact.txt / contact: website, GitHub, TryHackMe and LinkedIn URLs.
+skills: toolkit with learning/proficiency status.
+certs: earned certificates and learning paths.
+stats: Top 5%, 27 badges, 100+ rooms on TryHackMe.
+awards: academic excellence award.
+lab: scroll to network simulation.
+packets: scroll to packet explorer.
+theme: switch red / ice appearance.
+help: list available commands.
+clear: clear terminal output.
+
+Use Up/Down to recall commands; Tab completes a unique match.
+Edit terminal.js to change command responses or suggested buttons.
+Edit terminal.css to change the terminal layout and appearance.
+Upload all ZIP contents to the root of your GitHub Pages repository.
+Keep CNAME, .nojekyll, assets and certificates together with index.html.
+
+V9.1: Cursor trail now uses frame-synchronized transforms, a shorter 3-dot trail, time-based smoothing, immediate restart at the actual pointer, and no left/top transitions. Native cursor remains responsive.
+
+V10: New precision cursor in precision.js and cursor.css. Persistent targeting brackets, rotating arc, gold diamond hover state and press feedback. New native SVG tips in assets/precision.svg and assets/precision-link.svg. The previous dot trail is no longer loaded.
+
+
+
+V8 — Interactive portfolio CLI
+The opening section now contains a typed terminal. The network simulation is below the skills and packet lab sections.
+Commands are local portfolio interactions, not a system shell.
+
+whoami: Abdulrahman Ghanayem, handle, specialization and focus.
+pwd: /home/u2cxe
+ls: profile files and directories.
+cat focus.txt: Red Team · Penetration Tester · Network Pentester
+cat about.txt: education, university and academic excellence.
+cat contact.txt / contact: website, GitHub, TryHackMe and LinkedIn URLs.
+skills: toolkit with learning/proficiency status.
+certs: earned certificates and learning paths.
+stats: Top 5%, 27 badges, 100+ rooms on TryHackMe.
+awards: academic excellence award.
+lab: scroll to network simulation.
+packets: scroll to packet explorer.
+theme: switch red / ice appearance.
+help: list available commands.
+clear: clear terminal output.
+
+Use Up/Down to recall commands; Tab completes a unique match.
+Edit terminal.js to change command responses or suggested buttons.
+Edit terminal.css to change the terminal layout and appearance.
+Upload all ZIP contents to the root of your GitHub Pages repository.
+Keep CNAME, .nojekyll, assets and certificates together with index.html.
+
+
+V8 — Interactive portfolio CLI
+The opening section now contains a typed terminal. The network simulation is below the skills and packet lab sections.
+Commands are local portfolio interactions, not a system shell.
+
+whoami: Abdulrahman Ghanayem, handle, specialization and focus.
+pwd: /home/u2cxe
+ls: profile files and directories.
+cat focus.txt: Red Team · Penetration Tester · Network Pentester
+cat about.txt: education, university and academic excellence.
+cat contact.txt / contact: website, GitHub, TryHackMe and LinkedIn URLs.
+skills: toolkit with learning/proficiency status.
+certs: earned certificates and learning paths.
+stats: Top 5%, 27 badges, 100+ rooms on TryHackMe.
+awards: academic excellence award.
+lab: scroll to network simulation.
+packets: scroll to packet explorer.
+theme: switch red / ice appearance.
+help: list available commands.
+clear: clear terminal output.
+
+Use Up/Down to recall commands; Tab completes a unique match.
+Edit terminal.js to change command responses or suggested buttons.
+Edit terminal.css to change the terminal layout and appearance.
+Upload all ZIP contents to the root of your GitHub Pages repository.
+Keep CNAME, .nojekyll, assets and certificates together with index.html.
+
+
+V8 — Interactive portfolio CLI
+The opening section now contains a typed terminal. The network simulation is below the skills and packet lab sections.
+Commands are local portfolio interactions, not a system shell.
+
+whoami: Abdulrahman Ghanayem, handle, specialization and focus.
+pwd: /home/u2cxe
+ls: profile files and directories.
+cat focus.txt: Red Team · Penetration Tester · Network Pentester
+cat about.txt: education, university and academic excellence.
+cat contact.txt / contact: website, GitHub, TryHackMe and LinkedIn URLs.
+skills: toolkit with learning/proficiency status.
+certs: earned certificates and learning paths.
+stats: Top 5%, 27 badges, 100+ rooms on TryHackMe.
+awards: academic excellence award.
+lab: scroll to network simulation.
+packets: scroll to packet explorer.
+theme: switch red / ice appearance.
+help: list available commands.
+clear: clear terminal output.
+
+Use Up/Down to recall commands; Tab completes a unique match.
+Edit terminal.js to change command responses or suggested buttons.
+Edit terminal.css to change the terminal layout and appearance.
+Upload all ZIP contents to the root of your GitHub Pages repository.
+Keep CNAME, .nojekyll, assets and certificates together with index.html.
