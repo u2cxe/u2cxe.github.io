@@ -1,5 +1,5 @@
 /* Update these values when your TryHackMe profile changes. */
-const THM_PROFILE = { topPercent: 5, badges: 27, rooms: 100, roomsSuffix: '+', updated: 'November 17, 2026', url: 'https://tryhackme.com/p/u2cxe' };
+const THM_PROFILE = { topPercent: 3, badges: 29, rooms: 150, roomsSuffix: '+', updated: 'November 21, 2026', url: 'https://tryhackme.com/p/u2cxe' };
 (() => {
   const q=s=>document.querySelector(s), all=s=>[...document.querySelectorAll(s)];
   const section=q('#achievements');

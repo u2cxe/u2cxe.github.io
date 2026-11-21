@@ -7,7 +7,7 @@
 .precision-reticle .reticle-frame i:nth-child(2){transform:rotate(120deg)}
 .precision-reticle .reticle-frame i:nth-child(3){transform:rotate(240deg)}
 .precision-reticle .reticle-frame i:nth-child(4){display:none}
-.precision-reticle.target .reticle-frame{width:28px;height:28px;left:-14px;top:-14px;scale:1.1;animation-duration:3s}
+.precision-reticle.target .reticle-frame{width:28px;height:28px;left:-14px;top:-14px;scale:1.1;animation-duration:1.1s}
 .precision-reticle.target .reticle-frame i{height:11px;background:linear-gradient(#ffe2b5,var(--cursor-color),transparent)}
 .precision-reticle.pressed .reticle-frame{scale:.55}
 .precision-reticle .reticle-pulse{width:22px;height:22px;left:-11px;top:-11px;border:1px solid var(--cursor-color)}
@@ -16,11 +16,3 @@
 @keyframes spark-spin{to{transform:rotate(360deg)}}
 @keyframes spark-burst{0%{opacity:.9;transform:scale(.5) rotate(0);border-radius:30%}100%{opacity:0;transform:scale(2) rotate(90deg);border-radius:50%}}
 .calm .precision-reticle .reticle-frame{animation:none}
-
-/* Constant rotation avoids angle jumps on rapid hover changes. */
-body::before{display:none}
-.pointer-spotlight{position:fixed;left:0;top:0;width:480px;height:480px;background:radial-gradient(circle,#ff3d3d12,transparent 65%);pointer-events:none;z-index:1;will-change:transform;contain:strict}
-.precision-reticle .reticle-frame{will-change:transform;backface-visibility:hidden}
-.precision-reticle .reticle-frame i{filter:none}
-.precision-reticle.spark-click .reticle-pulse,.precision-reticle.pressed .reticle-pulse{animation:none}
-@media(hover:none),(pointer:coarse){.pointer-spotlight{display:none}}
